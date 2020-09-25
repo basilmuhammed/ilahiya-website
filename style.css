@@ -174,9 +174,11 @@ main{
         align-items: center;
         margin: 0;
         justify-content: center;
+        height: 100vh;
     }
     .logo-wrapper{
         width: 100px;
+        padding-bottom: 1em;
     }
     .logo-wrapper img{
         width: 100%;
@@ -189,17 +191,17 @@ main{
         text-align: center;
     }
     .heading-wrapper h1{
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
     .heading-wrapper p{
-        font-size: 0.7rem;
-        width: 70%;
+        font-size: 0.8rem;
+        width: 80%;
     }
     .contactdetails-wrapper h2{
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: center;
-        line-height: 1rem;
+        line-height: 2rem;
     }
 }
 
@@ -230,6 +232,13 @@ main{
 @media screen and (max-width:768px){
     .card{
         margin: 1em 2em ;
+    }
+    .card p{
+        padding-top: 0.8em;
+        font-size: 0.9rem;
+    }
+    .card i{
+        padding: 0;
     }
 }
 
@@ -284,8 +293,9 @@ main{
 
 @media screen and (max-width:768px){
 .course-wrapper h1{
-    font-size: 1.8rem;
-    padding: 0.5em 0 0 0;
+    font-size: 1.9rem;
+    padding: 0.3em 0 0 0;
+    letter-spacing: 0.1rem;
 }
 .courses{
     display: flex;
@@ -299,6 +309,10 @@ main{
 .course{
     margin:1em 0 0 0 ;
     width: 90%;
+}
+.course p{
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 0.9rem;
 }
 }
 
@@ -428,6 +442,7 @@ main{
         font-size: 2rem;
         line-height: 2.5rem;
         padding-top: 0;
+        font-weight: 750;
     }
     .pic-pop-contents i{
     font-size: 1rem;
@@ -437,6 +452,11 @@ main{
     }
     .pic-wrapper p{
     width: 90%;
+    color: var(--light-black);
+    }
+    .pic-wrapper button{
+        color: var(--light-black);
+        font-size: 1.2rem;
     }
 
 } 
