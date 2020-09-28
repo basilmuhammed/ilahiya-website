@@ -40,3 +40,22 @@ openbtn.addEventListener("click", () => {
 closebtn.addEventListener("click", () => {
   picpop.classList.remove("pop-active");
 });
+
+//form
+ $("#submit-form").submit((e) => {
+   e.preventDefault();
+   $.ajax({
+     url:
+       "https://script.google.com/macros/s/AKfycbzywpVQIXb4UzboDmL0XW0s0gaY5SfXSt86W4MnLyvREra6wgs/exec",
+     data: $("#submit-form").serialize(),
+     method: "post",
+     success: function (response) {
+       alert("Form submitted successfully");
+       window.location.reload();
+       //window.location.href="https://google.com"
+     },
+     error: function (err) {
+       alert("Something Error");
+     },
+   });
+ });
