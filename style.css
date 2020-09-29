@@ -651,22 +651,32 @@ fieldset button {
   text-align: right;
   padding: 0.8rem 4rem 0 0;
 }
+.quote h4{
+  text-align: right;
+  padding: 0 4rem 0 0;
+}
 .quote p{
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: var(--light-black);
+  padding-left:1rem ;
 }
-.quote p::before{
+/* .q-symbol::before{
   content: open-quote;
   color: var(--red);
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: var(--primary-font);
+  padding-left: 0.5rem;
+} */
+.quote i{
+  color: var(--red);
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width:768px){
   .quote-wrapper{
     padding: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
   .quote-card{
     flex-direction: column;
@@ -686,14 +696,19 @@ fieldset button {
   }
   .quote h3{
   text-align: right;
-  padding: 0 4rem 0 0;
+  padding: 0 4rem 0rem 0;
+}
+  .quote h4{
+  text-align: right;
+  padding: 0 4rem 2rem 0;
 }
 .quote p{
   font-size: 0.9rem;
   line-height: 1.1rem;
-  padding: 1rem;
+  padding: 0.5rem 1.5rem;
 }
-.quote p::before{
-  font-size: 2rem;
+.quote i{
+  font-size: 1rem;
+  padding-left: 0.5rem;
 }
 }
