@@ -585,6 +585,10 @@ fieldset button {
 @media screen and (max-width:768px){
   .contact-wrapper{
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .text{
+    padding-left: 1rem;
   }
   .text h1{
     font-size: 2.5rem;
@@ -612,4 +616,84 @@ fieldset button {
     font-size: 1rem;
   }
 
+}
+
+
+
+
+.quote-wrapper{
+  padding: 5rem;
+  font-family: var(--secondary-font);
+}
+.quote-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+  text-align: center;
+  margin-right: 4rem;
+}
+.profile-img img{
+  width: 200px;
+  height: 200px;
+}
+.quote{
+  width: 50%;
+  text-align: left;
+}
+.quote h3{
+  text-align: right;
+  padding: 0.8rem 4rem 0 0;
+}
+.quote p{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--light-black);
+}
+.quote p::before{
+  content: open-quote;
+  color: var(--red);
+  font-size: 4rem;
+  font-family: var(--primary-font);
+}
+
+@media screen and (max-width:768px){
+  .quote-wrapper{
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .quote-card{
+    flex-direction: column;
+  }
+  .profile-img{
+    width: 150px;
+    height: 150px;
+    margin: 0 0 0.2rem 0;
+    text-align: center;
+  }
+  .profile-img img{
+    width: 150px;
+    height: 150px;
+  }
+  .quote{
+    width: 99%;
+  }
+  .quote h3{
+  text-align: right;
+  padding: 0 4rem 0 0;
+}
+.quote p{
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  padding: 1rem;
+}
+.quote p::before{
+  font-size: 2rem;
+}
 }
