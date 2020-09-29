@@ -39,6 +39,7 @@ html {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: var(--primary-font);
+  font-size: 1.2rem;
 }
 
 .hamburger-menu {
@@ -193,6 +194,10 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+  .full-img{
+    height: auto;
+    width: 100%;
+  }
     .album-container h1{
         font-size: 1.5rem;
         letter-spacing: 2rem;
@@ -210,5 +215,75 @@ html {
   }
   .description-field{
       top: 15%;
+  }
+}
+
+
+footer {
+  width: audo;
+  height: 300px;
+  background-color: white;
+  font-family: var(--complementary-font);
+}
+
+.footer-container {
+  padding: 3em;
+  height: inherit;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: rgb(36, 36, 36);
+}
+
+.footer-text p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+}
+.footer-text a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+}
+.social-media {
+  font-size: 2.2rem;
+}
+.social-media i {
+  padding-right: 1rem;
+}
+.social-media a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    background-color: white;
+    height: 100px;
+  }
+  .footer-container {
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-text p {
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+  }
+  .footer-text a {
+    color: rgb(0, 0, 0);
+  }
+  .social-media {
+    font-size: 1.5rem;
+  }
+  .social-media i {
+    padding-right: 0.7rem;
+    padding-top: 1rem;
+  }
+  .social-media a {
+    color: rgb(0, 0, 0);
   }
 }
