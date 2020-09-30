@@ -18,6 +18,12 @@ main {
   height: 100vh;
 }
 
+p{
+  font-size: 1.3rem;
+  font-family: var(--secondary-font);
+}
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -87,6 +93,7 @@ main {
     justify-content: center;
     transition: 2s ease-in-out;
     opacity: 0;
+    z-index: 8;
   }
   .nav-open {
     display: flex;
@@ -97,7 +104,7 @@ main {
     top: 35px;
     right: 40px;
     display: flex;
-    z-index: 1;
+    z-index: 9;
   }
   .hamburger-active {
     background: transparent;
@@ -140,11 +147,9 @@ main {
 }
 
 .heading-wrapper p {
-  font-size: 1.2rem;
   padding-top: 1rem;
   width: 50%;
   font-weight: 300;
-  font-family: var(--complementary-font);
 }
 .heading-wrapper h3 {
   font-weight: 500;
@@ -203,7 +208,7 @@ main {
   flex-wrap: wrap;
 }
 .card {
-  margin: 4em 2em;
+  margin: 4em 4em;
   flex: 20rem;
   text-align: center;
   font-family: var(--primary-font);
@@ -215,7 +220,6 @@ main {
   font-size: 3rem;
 }
 .card p {
-  font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.623);
 }
 
@@ -266,11 +270,9 @@ main {
   font-size: 3rem;
 }
 .course p {
-  font-size: 1.1rem;
-  font-family: var(--complementary-font);
   font-weight: 400;
   padding: 1em 0;
-  color: rgba(255, 255, 255, 0.664);
+  color: rgba(255, 255, 255, 0.979);
 }
 .course h2 {
   font-family: var(--complementary-font);
@@ -329,19 +331,24 @@ main {
 }
 .one-active {
   display: flex;
+  z-index: 8;
 }
 .two-active {
   display: flex;
+  z-index: 8;
 }
 .popup {
   background-color: white;
-  font-size: 0.8rem;
   width: 600px;
-  padding: 5em;
+  padding: 2em;
   color: black;
+  text-align: left;
 }
 .popup h2 {
   padding-bottom: 0.5em;
+}
+.popup h3{
+  padding: 1rem;
 }
 .popup i {
   font-size: 1.5rem;
@@ -352,6 +359,13 @@ main {
   outline: none;
   float: right;
 }
+
+@media screen and (max-width:768px){
+  .popup p{
+    font-size: 0.8rem;
+  }
+}
+
 
 .pic-wrapper {
   padding: 5em 2em 1em 3em;
@@ -367,7 +381,6 @@ main {
   width: 80%;
   text-align: center;
   display: block;
-  font-size: 1rem;
 }
 .pic-wrapper h1 {
   font-size: 3em;
@@ -375,16 +388,15 @@ main {
   padding: 1em 0 0.5em 0;
 }
 .pic-read-button {
-  margin-top: 1em;
+  margin-top: 2rem;
   padding: 0.8rem 1.5rem;
-  border: none;
-  outline: none;
   background-color: var(--orange);
-  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: var(--dark-black);
+  outline: none;
+  border: none;
   border-radius: 5px;
-  color: rgb(36, 36, 36);
   cursor: pointer;
-  font-size: 1.2rem;
 }
 .pic-popup {
   position: fixed;
@@ -399,6 +411,7 @@ main {
 }
 .pop-active {
   display: flex;
+  z-index: 8;
 }
 .pic-pop-contents {
   background-color: white;
@@ -408,17 +421,22 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 2rem;
 }
 .pic-pop-contents p {
   width: 90%;
+  text-align: left;
 }
+
 .pic-pop-contents h1 {
-  line-height: 3rem;
+  line-height: 2rem;
   text-align: center;
 }
+.pic-pop-contents h2 {
+  text-align: left;
+  padding: 0.5rem;
+}
 .pic-pop-button {
-  background-color: white;
+  background-color: transparent;
   margin: 0;
   padding: 0;
   color: var(--light-black);
@@ -426,8 +444,8 @@ main {
   outline: none;
   cursor: pointer;
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 10px;
+  right: 10px;
 }
 .pic-pop-contents i {
   color: black;
@@ -450,9 +468,11 @@ main {
   }
   .pic-pop-contents p {
     width: 95%;
+    font-size: 0.9rem;
   }
   .pic-wrapper p {
     width: 99%;
+    font-size: 0.9rem;
     color: var(--light-black);
   }
   .pic-wrapper button {
@@ -481,7 +501,6 @@ footer {
 .footer-text p {
   font-size: 1.2rem;
   font-weight: 100;
-  letter-spacing: 0.5rem;
 }
 .footer-text a {
   text-decoration: none;
@@ -514,7 +533,6 @@ footer {
   .footer-text p {
     font-size: 1rem;
     font-weight: 200;
-    letter-spacing: 0.2rem;
   }
   .footer-text a {
     color: rgb(0, 0, 0);
@@ -624,6 +642,7 @@ fieldset button {
 .quote-wrapper{
   padding: 5rem;
   font-family: var(--secondary-font);
+  z-index: 2;
 }
 .quote-card{
   display: flex;
@@ -656,7 +675,6 @@ fieldset button {
   padding: 0 4rem 0 0;
 }
 .quote p{
-  font-size: 1.2rem;
   line-height: 1.5rem;
   color: var(--light-black);
   padding-left:1rem ;

@@ -1,11 +1,16 @@
 // navigation
 const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".hamburger-menu");
+const navele = document.querySelector(".nav-elements")
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("hamburger-active");
   navbar.classList.toggle("nav-open");
 });
+navele.addEventListener("click", () => {
+  hamburger.classList.remove("hamburger-active");
+  navbar.classList.remove("nav-open");
+})
 
 //popup
 const btnone = document.querySelector(".course-btn-one");
@@ -41,6 +46,9 @@ closebtn.addEventListener("click", () => {
   picpop.classList.remove("pop-active");
 });
 
+picpop.addEventListener("click", () => {
+  picpop.classList.remove("pop-active");
+});
 //form
  $("#submit-form").submit((e) => {
    e.preventDefault();

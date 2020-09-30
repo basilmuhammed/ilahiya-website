@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .navbar {
   display: flex;
   align-items: center;
@@ -238,7 +239,6 @@ footer {
 .footer-text p {
   font-size: 1.2rem;
   font-weight: 100;
-  letter-spacing: 0.5rem;
 }
 .footer-text a {
   text-decoration: none;
@@ -271,7 +271,6 @@ footer {
   .footer-text p {
     font-size: 1rem;
     font-weight: 200;
-    letter-spacing: 0.2rem;
   }
   .footer-text a {
     color: rgb(0, 0, 0);
