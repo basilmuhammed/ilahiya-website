@@ -314,7 +314,7 @@ p{
     font-size: 0.9rem;
   }
   .course h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -505,6 +505,11 @@ p{
     color: var(--light-black);
     font-size: 1rem;
     font-weight: 500;
+    padding: 0.8rem;
+    margin: 0;
+    background-color: transparent;
+    border: 2px solid var(--orange);
+    margin-bottom: 1rem;
   }
 }
 
@@ -655,7 +660,8 @@ textarea {
     font-size: 0.9rem;
   }
   .sumbit-btn{
-    width: 40%;
+    width: 30%;
+    font-size: 0.8rem;
   }
  
 }
