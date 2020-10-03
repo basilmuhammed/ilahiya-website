@@ -148,8 +148,8 @@ p{
 
 .heading-wrapper p {
   padding-top: 1rem;
-  width: 50%;
-  font-weight: 300;
+  width: 70%;
+  font-weight: 600;
 }
 .heading-wrapper h3 {
   font-weight: 500;
@@ -225,7 +225,7 @@ p{
 
 @media screen and (max-width: 768px) {
   .card {
-    margin: 1em 2em;
+    margin: 1.5em 2em;
   }
   .card p {
     padding-top: 0.8em;
@@ -294,7 +294,7 @@ p{
     font-size: 2.5rem;
     padding: 0.3em 0 0 0;
     letter-spacing: 0.1rem;
-    font-family: var(--complementary-font);
+    font-family: var(--primary-font);
   }
   .courses {
     display: flex;
@@ -346,6 +346,7 @@ p{
 }
 .popup h2 {
   padding-bottom: 0.5em;
+  font-family: var(--primary-font);
 }
 .popup h3{
   padding: 1rem;
@@ -381,11 +382,33 @@ p{
   width: 80%;
   text-align: center;
   display: block;
+  font-weight: 700;
 }
 .pic-wrapper h1 {
   font-size: 3em;
   font-weight: 800;
   padding: 1em 0 0.5em 0;
+}
+.features {
+  padding: 2rem;
+  text-align: center;
+}
+.features h2{
+  margin: 1rem;
+  background-color: var(--light-black);
+  padding: 0.5rem;
+  color: white;
+}
+.features ul{
+  padding: 0.5rem 1rem;
+  list-style-type: circle;
+}
+.features li{
+  padding: 0.2rem;
+}
+.features p{
+  font-weight: 300;
+  text-align: left;
 }
 .pic-read-button {
   margin-top: 2rem;
@@ -453,6 +476,9 @@ p{
 }
 
 @media screen and (max-width: 768px) {
+  .features h2{
+    font-size: 1.3rem;
+  }
   .pic-wrapper {
     padding: 3em 0.7em;
   }
@@ -571,15 +597,13 @@ footer {
   width: 700px;
   margin: 4em 0;
 }
-fieldset {
-  margin-bottom: 0.5rem;
-  border: none;
-}
+
 input {
   border: 1px solid rgba(128, 128, 128, 0.404);
   padding: 0.8rem 1rem;
   width: 100%;
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 textarea {
   border: 1px solid rgba(128, 128, 128, 0.404);
@@ -590,14 +614,13 @@ textarea {
   height: 150px;
   outline: none;
 }
-fieldset button {
-  padding: 0.8rem 1.5rem;
-  background-color: var(--orange);
-  font-size: 1.3rem;
-  color: var(--dark-black);
-  outline: none;
-  border: none;
+.sumbit-btn {
+  font-size: 1.2rem;
+  background-color: var(--light-black);
+  color: white;
   border-radius: 5px;
+  width: 20%;
+  margin-top: 0.5rem;
 }
 
 @media screen and (max-width:768px){
@@ -626,14 +649,15 @@ fieldset button {
   }
   input{
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
   textarea{
     font-size: 0.9rem;
   }
-  fieldset button{
-    font-size: 1rem;
+  .sumbit-btn{
+    width: 40%;
   }
-
+ 
 }
 
 

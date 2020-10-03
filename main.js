@@ -50,12 +50,13 @@ picpop.addEventListener("click", () => {
   picpop.classList.remove("pop-active");
 });
 //form
- $("#submit-form").submit((e) => {
+
+ $("#sub-form").submit((e) => {
    e.preventDefault();
    $.ajax({
      url:
-       "https://script.google.com/macros/s/AKfycbzywpVQIXb4UzboDmL0XW0s0gaY5SfXSt86W4MnLyvREra6wgs/exec",
-     data: $("#submit-form").serialize(),
+       "https://script.google.com/macros/s/AKfycbzx3YVabgNyG4RkebVBsWk1kYGywKVqBxMYHQJ3PQ/exec",
+     data: $("#sub-form").serialize(),
      method: "post",
      success: function (response) {
        alert("Form submitted successfully");
