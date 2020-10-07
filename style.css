@@ -18,9 +18,17 @@ main {
   height: 100vh;
 }
 
+@media screen and (max-width:768px){
+  p{
+    font-size: 0.7rem;
+    font-family: var(--primary-font);
+  }
+}
+
 p{
-  font-size: 1.3rem;
-  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--complementary-font);
 }
 
 
@@ -40,8 +48,7 @@ p{
 .nav-elements li {
   display: inline-block;
   list-style: none;
-  padding-right: 1em;
-  font-weight: 400;
+  margin: 1rem;
   transition: 1s ease-in-out;
 }
 
@@ -52,15 +59,16 @@ p{
 .nav-elements a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-family: var(--complementary-font);
+  letter-spacing: 0.1rem;
+  font-family: var(--secondary-font);
   font-size: 1.2rem;
 }
 
 .hamburger-menu {
   background-color: white;
   width: 20px;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
+  height: 2px;
+  transition: all 0.2s ease-in-out;
   display: none;
   cursor: pointer;
 }
@@ -69,7 +77,7 @@ p{
   content: "";
   position: absolute;
   width: 20px;
-  height: 3px;
+  height: 2px;
   background-color: white;
 }
 .hamburger-menu::before {
@@ -87,26 +95,25 @@ p{
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: rgba(0, 0, 0,0.9);
     display: none;
     align-items: center;
     justify-content: center;
-    transition: 2s ease-in-out;
-    opacity: 0;
     z-index: 8;
   }
   .nav-open {
     display: flex;
-    opacity: 1;
   }
   .hamburger-menu {
     position: absolute;
-    top: 35px;
+    top: 45px;
     right: 40px;
     display: flex;
     z-index: 9;
+    transition: all 1s ease-in-out;
   }
   .hamburger-active {
+    position: fixed;
     background: transparent;
   }
   .hamburger-active::before {
@@ -116,14 +123,13 @@ p{
     transform: rotate(-45deg);
   }
   .nav-elements ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    transform: translateX(15%);
   }
-  .nav-elements li {
-    padding: 0.5em 0;
+  .nav-elements li{
+    display: block;
   }
+  
 }
 
 /* Landing Page */
@@ -143,23 +149,29 @@ p{
 .heading-wrapper h1 {
   font-size: 3.5rem;
   line-height: 4rem;
-  font-weight: 800;
+  font-weight: 700;
+  padding-bottom: 0.3rem;
 }
 
 .heading-wrapper p {
+  font-size: 1.2rem;
   padding-top: 1rem;
   width: 70%;
-  font-weight: 600;
+  font-weight: 400;
 }
 .heading-wrapper h3 {
   font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
 }
 
 .contactdetails-wrapper {
   margin-top: 7rem;
   font-size: 0.8rem;
   line-height: 1.8rem;
+  letter-spacing: 0.1rem;
 }
+
 
 @media screen and (max-width: 768px) {
   .landing-page {
@@ -191,8 +203,9 @@ p{
     font-size: 0.9rem;
   }
   .heading-wrapper p {
-    font-size: 0.8rem;
-    width: 80%;
+    font-size: 0.9rem;
+    width: 90%;
+    text-align: left;
   }
   .contactdetails-wrapper h2 {
     font-size: 1rem;
@@ -215,12 +228,11 @@ p{
   color: var(--dark-black);
 }
 .card i {
-  padding-bottom: 1rem;
   color: var(--dark-blue);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .card p {
-  color: rgba(0, 0, 0, 0.623);
+  color: var(--light-black);
 }
 
 @media screen and (max-width: 768px) {
@@ -228,40 +240,34 @@ p{
     margin: 1.5em 2em;
   }
   .card p {
-    padding-top: 0.8em;
     font-size: 0.9rem;
   }
   .card i {
     padding: 0;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.2em;
   }
 }
 
 .course-wrapper {
   text-align: center;
-  background-color: black;
+  background-color: var(--orange);
   font-family: var(--primary-font);
   margin-top: 2em;
-  color: white;
-  overflow: hidden;
+  color: var(--light-black);
 }
-.vl {
-  border-right: 1px solid rgba(255, 255, 255);
-  height: 250px;
-}
+
 .courses {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .course {
-  margin: 3em 4em;
-  width: 40%;
+  margin: 3em 3em;
+  width: 50%;
 }
 .head {
-  /* background-color: var(--light-black); */
   text-align: center;
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
 }
 .course-wrapper h1 {
   font-family: var(--primary-font);
@@ -270,30 +276,30 @@ p{
   font-size: 3rem;
 }
 .course p {
-  font-weight: 400;
   padding: 1em 0;
-  color: rgba(255, 255, 255, 0.979);
 }
 .course h2 {
   font-family: var(--complementary-font);
   font-size: 2.5rem;
 }
+.course h3{
+  font-size: 1.5rem;
+}
 .course button {
-  padding: 1rem 0.5rem 3rem 0.5rem;
+  padding: 0.5rem;
   border: none;
+  border-radius: 7px;
   outline: none;
   cursor: pointer;
-  font-weight: bold;
   font-size: 1rem;
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  margin:1rem ;
 }
 
 @media screen and (max-width: 768px) {
   .course-wrapper h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 0.3em 0 0 0;
-    letter-spacing: 0.1rem;
     font-family: var(--primary-font);
   }
   .courses {
@@ -302,19 +308,24 @@ p{
     align-items: center;
     justify-content: center;
   }
-  .vl {
-    display: none;
-  }
+
   .course {
     margin: 1em 0 0 0;
     width: 90%;
   }
-  .course p {
-    color: rgba(255, 255, 255, 0.705);
-    font-size: 0.9rem;
+  .course p{
+    text-align: left;
   }
+  
   .course h2 {
     font-size: 1.4rem;
+  }
+  .course h3{
+    font-size: 1rem;
+  }
+  .course button{
+    font-size: 0.9rem;
+    padding: 0.4rem;
   }
 }
 
@@ -394,7 +405,7 @@ p{
   text-align: center;
 }
 .features h2{
-  margin: 1rem;
+  margin: 0.5rem;
   background-color: var(--light-black);
   padding: 0.5rem;
   color: white;
@@ -412,9 +423,9 @@ p{
 }
 .pic-read-button {
   margin-top: 2rem;
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem;
   background-color: var(--orange);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--dark-black);
   outline: none;
   border: none;
@@ -508,7 +519,7 @@ p{
     padding: 0.8rem;
     margin: 0;
     background-color: transparent;
-    border: 2px solid var(--orange);
+    border: none;
     margin-bottom: 1rem;
   }
 }
@@ -530,15 +541,14 @@ footer {
 }
 
 .footer-text p {
-  font-size: 1.2rem;
-  font-weight: 100;
+  font-size: 1.1rem;
 }
 .footer-text a {
   text-decoration: none;
   color: white;
 }
 .social-media {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 .social-media i {
   padding-right: 1rem;
@@ -551,19 +561,21 @@ footer {
 @media screen and (max-width: 768px) {
   footer {
     background-color: white;
-    height: 100px;
+    height: 150px;
   }
   .footer-container {
     padding: 1rem;
     color: rgb(0, 0, 0);
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
   }
 
   .footer-text p {
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 100;
     padding-bottom: 0.5rem;
   }
   .footer-text a {
