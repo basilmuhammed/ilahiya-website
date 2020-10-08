@@ -250,10 +250,10 @@ p{
 
 .course-wrapper {
   text-align: center;
-  background-color: var(--orange);
+  background-color: black;
   font-family: var(--primary-font);
   margin-top: 2em;
-  color: var(--light-black);
+  color: white;
 }
 
 .courses {
@@ -288,11 +288,11 @@ p{
 .course button {
   padding: 0.5rem;
   border: none;
-  border-radius: 7px;
   outline: none;
   cursor: pointer;
   font-size: 1rem;
-  background-color: white;
+  background-color: transparent;
+  color: white;
   margin:1rem ;
 }
 
@@ -315,6 +315,7 @@ p{
   }
   .course p{
     text-align: left;
+    font-size: 0.9rem;
   }
   
   .course h2 {
@@ -401,7 +402,7 @@ p{
   padding: 1em 0 0.5em 0;
 }
 .features {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 .features h2{
@@ -423,7 +424,7 @@ p{
 }
 .pic-read-button {
   margin-top: 2rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--orange);
   font-size: 1.1rem;
   color: var(--dark-black);
